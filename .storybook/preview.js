@@ -1,4 +1,11 @@
-export const parameters = {
+import React from 'react'
+import { addDecorator } from '@storybook/react'
+import { Center } from '../src/components/Center/Center'
+
+addDecorator((story) => <Center> {story()} </Center>)
+
+{
+  /* export const parameters = {
   actions: {
     argTypesRegex: '^on[A-Z].*',
   },
@@ -8,9 +15,12 @@ export const parameters = {
         ? 0
         : a[1].id.localeCompare(b[1].id, undefined, { numeric: true }),
   },
-}
+}*/
 
-// export const decorators = [
+    }
+
+{
+  /* // export const decorators = [
 //   (Story) => (
 //     <ThemeProvider theme={theme}>
 //       <CSSReset />
@@ -19,4 +29,6 @@ export const parameters = {
 //       </Box>
 //     </ThemeProvider>
 //   ),
-// ]
+// ] */
+
+}
