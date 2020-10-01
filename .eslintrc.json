@@ -1,39 +1,37 @@
 {
-  "extends": [
-    "airbnb-typescript",
-    "airbnb/hooks",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:jest/recommended",
-    "prettier",
-    "prettier/react",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
-  ],
-  "plugins": ["react", "@typescript-eslint", "jest"],
   "env": {
     "browser": true,
-    "es6": true,
-    "jest": true
+    "es6": true
   },
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly",
-  },
+  "extends": [
+    "airbnb-typescript",
+    "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 2018,
-    "sourceType": "module",
-    "project": "./tsconfig.json",
+      "jsx": true // Allows for the parsing of JSX
+      }
+      // "ecmaVersion": 12
+      // "sourceType": "module"
   },
+  "plugins": [
+    "@typescript-eslint/eslint-plugin",
+    "@typescript-eslint"
+  ],
   "rules": {
-    "linebreak-style": "off",
+    "semi": "error",
     "prettier/prettier": [
       "error",
       {
-        "endOfLine": "auto",
+        "printWidth": 50,
+        "trailingComma": "es5",
+        "semi": true,
+        "singleQuote": true,
+        "useTabs": true,
+        "tabWidth": 8
       }
     ]
   }
