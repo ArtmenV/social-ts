@@ -23,16 +23,16 @@
   ],
   "rules": {
     "semi": "error",
-    // "prettier/prettier": [
-    //   "error",
-    //   {
-    //     "printWidth": 80,
-    //     "trailingComma": "es5",
-    //     "semi": false,
-    //     "singleQuote": true,
-    //     "useTabs": true,
-    //     "tabWidth": 8
-    //   }
-    // ]
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "trailingComma": "es5",
+        "semi": false,
+        "singleQuote": true,
+        "useTabs": true,
+        "tabWidth": 8
+      }
+    ]
   }
 }
