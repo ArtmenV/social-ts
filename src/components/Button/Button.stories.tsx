@@ -3,15 +3,20 @@ import Button from './Button'
 import { Center } from '../Center/Center'
 
 export default {
-  title: 'Form/Control/Button',
+  // title: 'Form/Control/Button',
+  // decorators: [(story: any) => <Center>{story()}</Center>],
+  title: 'Form/Button',
   component: Button,
-  decorators: [(story: any) => <Center>{story()}</Center>],
+  argTypes: {
+    variantColor: { control: 'text' },
+    children: { control: 'text' },
+    onClick: { action: 'clicked' },
+  },
 }
 
 export interface IButtonProps {
   children?: React.ReactNode
   variant?: any
-  onClick?: (e: React.MouseEvent<HTMLElement>) => void
   args: {
     children: string
     variant: string
@@ -19,7 +24,7 @@ export interface IButtonProps {
 }
 export const Primary = () => <Button variant="primary">Primary</Button>
 export const Secondary = () => <Button variant="secondary">Secondary</Button>
-export const Success = () => <Button variant="success">Success</Button>
+export const Success = () => <Button variant="success"></Button>
 export const Danger = () => <Button variant="danger">Danger</Button>
 
 const Template = (args: IButtonProps) => <Button {...args} />
@@ -27,6 +32,7 @@ const Template = (args: IButtonProps) => <Button {...args} />
 export const PrimaryA: any = Template.bind({})
 
 PrimaryA.args = {
-  variant: 'primary',
-  children: 'primary Args',
+  variantColor: 'green',
+  children: 'sucessss',
+  onClick: { action: 'clicked' },
 }

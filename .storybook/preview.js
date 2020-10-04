@@ -2,10 +2,10 @@ import React from 'react'
 import { addDecorator } from '@storybook/react'
 import { Center } from '../src/components/Center/Center'
 
-addDecorator((story) => <Center> {story()} </Center>)
+// addDecorator((story) => <Center> {story()} </Center>)
 
-{
-  /* export const parameters = {
+
+export const parameters = {
   actions: {
     argTypesRegex: '^on[A-Z].*',
   },
@@ -15,9 +15,7 @@ addDecorator((story) => <Center> {story()} </Center>)
         ? 0
         : a[1].id.localeCompare(b[1].id, undefined, { numeric: true }),
   },
-}*/
-
-    }
+}
 
 {
   /* // export const decorators = [
