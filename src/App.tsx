@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from "./logo.svg"
-import NeginaImage from './static/negina-goal-lg.jpg'
+import logo from './logo.svg'
 import './App.css'
 
 import { ExchangeRates } from './grapghQL/Currency'
@@ -9,14 +8,6 @@ import { Dogs } from './grapghQL/Dogs'
 function App() {
   return (
     <div className="App">
-      {' '}
-      <img src={logo} className="App-logo" alt="logo" />
-      <img src={NeginaImage} alt="Gir" className="App-logo" />
-      asdasd asdas
-      <picture>
-        <source data-src={NeginaImage} />
-        <img alt="ddd" className="lazy" src={NeginaImage} />
-      </picture>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -26,11 +17,6 @@ function App() {
           Learn React
         </a>
         <ExchangeRates />
-
-        <picture>
-          <source data-src={NeginaImage} />
-          <img alt="ddd" className="lazy" src={NeginaImage} />
-        </picture>
       </header>
       <Dogs />
     </div>
